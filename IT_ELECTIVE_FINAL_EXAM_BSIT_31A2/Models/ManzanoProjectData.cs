@@ -158,10 +158,6 @@ namespace IT_ELECTIVE_FINAL_EXAM_BSIT_31A2.Models
             GitHubUrl = "https://github.com/andrewmanzano/IT_ELECTIVE_2_BSIT-31E2_PREFINAL_EXAM_Manzano_Alejandro.git",
             ThumbnailPath = "/image/PreFinal_Exam.png"
         }
-    };
-
-        public IEnumerable<ManzanoProject> GetAll() => _projects;
-
-        public ManzanoProject? GetById(int id) => _projects.FirstOrDefault(p => p.Id == id);
+        };
     }
 }
