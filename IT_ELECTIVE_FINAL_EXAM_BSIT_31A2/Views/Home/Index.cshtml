@@ -2,7 +2,40 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<link rel="stylesheet" href="~/css/yellow-theme.css" asp-append-version="true" />
+
+<div class="yt-page">
+    <section class="yt-hero">
+        <div class="yt-hero-copy">
+            <p class="yt-kicker">IT Elective 2</p>
+            <h1 class="yt-display">BSIT 31E2 class portfolios</h1>
+            <p class="yt-lead">
+                Browse the IT Elective 2 work of every classmate in one place. Pick a name tag to open that person's portfolio.
+            </p>
+            <a class="yt-btn yt-btn-dark" asp-controller="Portfolios" asp-action="Index">
+                Browse portfolios<span class="yt-chev" aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="yt-fan" aria-hidden="true">
+            <div class="yt-mini"></div>
+            <div class="yt-mini"></div>
+            <div class="yt-mini"></div>
+        </div>
+    </section>
+
+    <dl class="yt-facts">
+        <div class="yt-fact">
+            <dt>Course</dt>
+            <dd>IT Elective 2</dd>
+        </div>
+        <div class="yt-fact">
+            <dt>Section</dt>
+            <dd>BSIT 31E2</dd>
+        </div>
+        <div class="yt-fact">
+            <dt>Inside each portfolio</dt>
+            <dd>One student's projects from the course</dd>
+        </div>
+    </dl>
 </div>

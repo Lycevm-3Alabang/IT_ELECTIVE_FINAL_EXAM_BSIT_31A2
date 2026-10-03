@@ -2,168 +2,225 @@
     ViewData["Title"] = "Portfolios";
 }
 
-<div class="text-center mb-4">
-    <h1 class="display-5">Portfolios</h1>
-    <p class="text-muted">BSIT31E2 &mdash; click a button to view a classmate's portfolio.</p>
+<link rel="stylesheet" href="~/css/yellow-theme.css" asp-append-version="true" />
+
+<div class="yt-page">
+    <header class="yt-pagehead">
+        <div>
+            <h1 class="yt-heading">Portfolios</h1>
+            <p class="yt-sub">BSIT31E2 &mdash; pick a name tag to open that classmate's portfolio.</p>
+        </div>
+        <div class="yt-search">
+            <label for="ytSearch" class="visually-hidden">Search by name</label>
+            <input id="ytSearch" type="search" class="form-control" placeholder="Search by name" autocomplete="off" />
+        </div>
+    </header>
+
+    <p id="ytCount" class="yt-count" aria-live="polite"></p>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+
+        @* ---- Eirene Ysabel Karunungan ---- *@
+        <div class="col yt-item">
+            <div class="yt-badge">
+                <div class="yt-badge-band"><span class="yt-slot"></span></div>
+                <div class="yt-avatar">EK</div>
+                <h5 class="yt-name">Eirene Ysabel Karunungan</h5>
+                <p class="yt-meta">IT Elective 2</p>
+                <span class="yt-chip">BSIT31E2</span>
+                <a class="yt-btn stretched-link" asp-controller="Eirene" asp-action="Index">View portfolio<span class="yt-chev" aria-hidden="true"></span></a>
+            </div>
+        </div>
+
+        @* ---- Renen Hernandez Isip ---- *@
+        <div class="col yt-item">
+            <div class="yt-badge">
+                <div class="yt-badge-band"><span class="yt-slot"></span></div>
+                <div class="yt-avatar">RI</div>
+                <h5 class="yt-name">Renen Hernandez Isip</h5>
+                <p class="yt-meta">IT Elective 2</p>
+                <span class="yt-chip">BSIT31E2</span>
+                <a class="yt-btn stretched-link" asp-controller="Isip" asp-action="Index">View portfolio<span class="yt-chev" aria-hidden="true"></span></a>
+            </div>
+        </div>
+
+        @* ---- Lourd Kian Hayden M. Daygon ---- *@
+        <div class="col yt-item">
+            <div class="yt-badge">
+                <div class="yt-badge-band"><span class="yt-slot"></span></div>
+                <div class="yt-avatar">LD</div>
+                <h5 class="yt-name">Lourd Kian Hayden M. Daygon</h5>
+                <p class="yt-meta">IT Elective 2</p>
+                <span class="yt-chip">BSIT31E2</span>
+                <a class="yt-btn stretched-link" asp-controller="Daygon" asp-action="Index">View portfolio<span class="yt-chev" aria-hidden="true"></span></a>
+            </div>
+        </div>
+
+        @* Classmates: copy the block above, paste it here, and change the name, initials and controller. DO NOT DELETE THIS LINE PLS PLS PLS *@
+
+        @* ---- Laurence Llorente ---- *@
+        <div class="col yt-item">
+            <div class="yt-badge">
+                <div class="yt-badge-band"><span class="yt-slot"></span></div>
+                <div class="yt-avatar">LL</div>
+                <h5 class="yt-name">Laurence Llorente</h5>
+                <p class="yt-meta">IT Elective 2</p>
+                <span class="yt-chip">BSIT31E2</span>
+                <a class="yt-btn stretched-link" asp-controller="Llorente" asp-action="Index">View portfolio<span class="yt-chev" aria-hidden="true"></span></a>
+            </div>
+        </div>
+
+        @* ---- Angelica Joyce Leano ---- *@
+        <div class="col yt-item">
+            <div class="yt-badge">
+                <div class="yt-badge-band"><span class="yt-slot"></span></div>
+                <div class="yt-avatar">AL</div>
+                <h5 class="yt-name">Angelica Joyce Leano</h5>
+                <p class="yt-meta">IT Elective 2</p>
+                <span class="yt-chip">BSIT31E2</span>
+                <a class="yt-btn stretched-link" asp-controller="Leano" asp-action="Index">View portfolio<span class="yt-chev" aria-hidden="true"></span></a>
+            </div>
+        </div>
+
+        @* ---- Marc Kevin Antonio ---- *@
+        <div class="col yt-item">
+            <div class="yt-badge">
+                <div class="yt-badge-band"><span class="yt-slot"></span></div>
+                <div class="yt-avatar">MA</div>
+                <h5 class="yt-name">Marc Kevin Antonio</h5>
+                <p class="yt-meta">IT Elective 2</p>
+                <span class="yt-chip">BSIT31E2</span>
+                <a class="yt-btn stretched-link" asp-controller="Antonio" asp-action="Index">View portfolio<span class="yt-chev" aria-hidden="true"></span></a>
+            </div>
+        </div>
+
+        @* ---- Raven Joe R. Albaño ---- *@
+        <div class="col yt-item">
+            <div class="yt-badge">
+                <div class="yt-badge-band"><span class="yt-slot"></span></div>
+                <div class="yt-avatar">RA</div>
+                <h5 class="yt-name">Raven Joe R. Albaño</h5>
+                <p class="yt-meta">IT Elective 2</p>
+                <span class="yt-chip">BSIT31E2</span>
+                <a class="yt-btn stretched-link" asp-controller="Albano" asp-action="Index">View portfolio<span class="yt-chev" aria-hidden="true"></span></a>
+            </div>
+        </div>
+
+        @* ---- Jaell Andrei Cabardo ---- *@
+        <div class="col yt-item">
+            <div class="yt-badge">
+                <div class="yt-badge-band"><span class="yt-slot"></span></div>
+                <div class="yt-avatar">JC</div>
+                <h5 class="yt-name">Jaell Andrei Cabardo</h5>
+                <p class="yt-meta">IT Elective 2</p>
+                <span class="yt-chip">BSIT31E2</span>
+                <a class="yt-btn stretched-link" asp-controller="Cabardo" asp-action="Index">View portfolio<span class="yt-chev" aria-hidden="true"></span></a>
+            </div>
+        </div>
+
+        @* ---- Angelica Marie J. Gomez ---- *@
+        <div class="col yt-item">
+            <div class="yt-badge">
+                <div class="yt-badge-band"><span class="yt-slot"></span></div>
+                <div class="yt-avatar">AG</div>
+                <h5 class="yt-name">Angelica Marie J. Gomez</h5>
+                <p class="yt-meta">IT Elective 2</p>
+                <span class="yt-chip">BSIT31E2</span>
+                <a class="yt-btn stretched-link" asp-controller="Gomez" asp-action="Index">View portfolio<span class="yt-chev" aria-hidden="true"></span></a>
+            </div>
+        </div>
+
+        @* ---- Lloyd Nathaniel Arciaga ---- *@
+        <div class="col yt-item">
+            <div class="yt-badge">
+                <div class="yt-badge-band"><span class="yt-slot"></span></div>
+                <div class="yt-avatar">LA</div>
+                <h5 class="yt-name">Lloyd Nathaniel Arciaga</h5>
+                <p class="yt-meta">IT Elective 2</p>
+                <span class="yt-chip">BSIT31E2</span>
+                <a class="yt-btn stretched-link" asp-controller="Arciaga" asp-action="Index">View portfolio<span class="yt-chev" aria-hidden="true"></span></a>
+            </div>
+        </div>
+
+        @* ---- Stephen Rhane L. Magnayon ---- *@
+        <div class="col yt-item">
+            <div class="yt-badge">
+                <div class="yt-badge-band"><span class="yt-slot"></span></div>
+                <div class="yt-avatar">SM</div>
+                <h5 class="yt-name">Stephen Rhane L. Magnayon</h5>
+                <p class="yt-meta">IT Elective 2</p>
+                <span class="yt-chip">BSIT31E2</span>
+                <a class="yt-btn stretched-link" asp-controller="Magnayon" asp-action="Index">View portfolio<span class="yt-chev" aria-hidden="true"></span></a>
+            </div>
+        </div>
+
+        @* ---- Christopher Joaquin Abadilla ---- *@
+        <div class="col yt-item">
+            <div class="yt-badge">
+                <div class="yt-badge-band"><span class="yt-slot"></span></div>
+                <div class="yt-avatar">CA</div>
+                <h5 class="yt-name">Christopher Joaquin Abadilla</h5>
+                <p class="yt-meta">IT Elective 2</p>
+                <span class="yt-chip">BSIT31E2</span>
+                <a class="yt-btn stretched-link" asp-controller="Abadilla" asp-action="Index">View portfolio<span class="yt-chev" aria-hidden="true"></span></a>
+            </div>
+        </div>
+
+        @* ---- Clarisse Anne Villamor ---- *@
+        <div class="col yt-item">
+            <div class="yt-badge">
+                <div class="yt-badge-band"><span class="yt-slot"></span></div>
+                <div class="yt-avatar">CV</div>
+                <h5 class="yt-name">Clarisse Anne Villamor</h5>
+                <p class="yt-meta">IT Elective 2</p>
+                <span class="yt-chip">BSIT31E2</span>
+                <a class="yt-btn stretched-link" asp-controller="Villamor" asp-action="Index">View portfolio<span class="yt-chev" aria-hidden="true"></span></a>
+            </div>
+        </div>
+
+        @* ---- Alejandro L. Manzano ---- *@
+        <div class="col yt-item">
+            <div class="yt-badge">
+                <div class="yt-badge-band"><span class="yt-slot"></span></div>
+                <div class="yt-avatar">AM</div>
+                <h5 class="yt-name">Alejandro L. Manzano</h5>
+                <p class="yt-meta">IT Elective 2</p>
+                <span class="yt-chip">BSIT31E2</span>
+                <a class="yt-btn stretched-link" asp-controller="Manzano" asp-action="Index">View portfolio<span class="yt-chev" aria-hidden="true"></span></a>
+            </div>
+        </div>
+
+
+        @* Classmates: copy the block above, paste it here, and change the name, initials and controller. DO NOT DELETE THIS LINE PLS PLS PLS *@
+
+    </div>
+
+    <p id="ytEmpty" class="yt-empty d-none">No portfolio matches that name. Check the spelling or clear the search.</p>
 </div>
 
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+@section Scripts {
+    <script>
+        (function () {
+            var input = document.getElementById('ytSearch');
+            var items = document.querySelectorAll('.yt-item');
+            var count = document.getElementById('ytCount');
+            var empty = document.getElementById('ytEmpty');
 
-    @* ----- Eirene Ysabel Karunungan ----- *@
-    <div class="col">
-        <div class="card h-100 shadow-sm">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Eirene Ysabel Karunungan</h5>
-                <p class="card-text text-muted">IT Elective 2 &middot; BSIT31E2</p>
-                <a class="btn btn-primary mt-auto" asp-controller="Eirene" asp-action="Index">View Portfolio</a>
-            </div>
-        </div>
-    </div>
+            function update() {
+                var term = input.value.trim().toLowerCase();
+                var shown = 0;
+                items.forEach(function (item) {
+                    var name = item.querySelector('.yt-name').textContent.toLowerCase();
+                    var match = name.indexOf(term) !== -1;
+                    item.classList.toggle('d-none', !match);
+                    if (match) shown++;
+                });
+                count.textContent = 'Showing ' + shown + ' of ' + items.length + ' portfolios';
+                empty.classList.toggle('d-none', shown !== 0);
+            }
 
-    @* ----- Renen Hernandez Isip ----- *@
-    <div class="col">
-        <div class="card h-100 shadow-sm">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Renen Hernandez Isip</h5>
-                <p class="card-text text-muted">IT Elective 2 &middot; BSIT31E2</p>
-                <a class="btn btn-primary mt-auto" asp-controller="Isip" asp-action="Index">View Portfolio</a>
-            </div>
-        </div>
-    </div>
-
-    @* ---- Lourd Kian Hayden M. Daygon ---- *@
-    <div class="col">
-        <div class="card h-100 shadow-sm">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Lourd Kian Hayden M. Daygon</h5>
-                <p class="card-text text-muted">IT Elective 2 &middot; BSIT31E2</p>
-                <a class="btn btn-primary mt-auto" asp-controller="Daygon" asp-action="Index">View Portfolio</a>
-            </div>
-        </div>
-    </div>
-
-    @* Classmates: copy the block above, paste it here, and change the name and the controller. DO NOT DELETE THIS LINE PLS PLS PLS *@
-    @* ---- Laurence Llorente ---- *@
-    <div class="col">
-        <div class="card h-100 shadow-sm">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Laurence Llorente</h5>
-                <p class="card-text text-muted">IT Elective 2 &middot; BSIT31E2</p>
-                <a class="btn btn-primary mt-auto" asp-controller="Llorente" asp-action="Index">View Portfolio</a>
-            </div>
-        </div>
-    </div>
-    @* ---- Angelica Joyce Leano ---- *@
-    <div class="col">
-        <div class="card h-100 shadow-sm">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Angelica Joyce Leano</h5>
-                <p class="card-text text-muted">IT Elective 2 &middot; BSIT31E2</p>
-                <a class="btn btn-primary mt-auto" asp-controller="Leano" asp-action="Index">View Portfolio</a>
-            </div>
-        </div>
-    </div>
-  
-    @* ----- Marc Kevin Antonio ----- *@
-    <div class="col">
-        <div class="card h-100 shadow-sm">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Marc Kevin Antonio</h5>
-                <p class="card-text text-muted">IT Elective 2 &middot; BSIT31E2</p>
-                <a class="btn btn-primary mt-auto" asp-controller="Antonio" asp-action="Index">View Portfolio</a>
-            </div>
-        </div>
-    </div>
-    @* ---- Raven Joe R. Albaño ---- *@
-    <div class="col">
-        <div class="card h-100 shadow-sm">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Raven Joe R. Albaño</h5>
-                <p class="card-text text-muted">IT Elective 2 &middot; BSIT31E2</p>
-                <a class="btn btn-primary mt-auto" asp-controller="Albano" asp-action="Index">View Portfolio</a>
-               </div>
-        </div>
-    </div>
-              
-    @* ---- Jaell Andrei Cabardo ---- *@
-    <div class="col">
-        <div class="card h-100 shadow-sm">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Jaell Andrei Cabardo</h5>
-                <p class="card-text text-muted">IT Elective 2 &middot; BSIT31E2</p>
-                <a class="btn btn-primary mt-auto" asp-controller="Cabardo" asp-action="Index">View Portfolio</a>
-              </div>
-        </div>
-    </div>
-  
-    @* ---- Angelica Marie J. Gomez ---- *@
-    <div class="col">
-        <div class="card h-100 shadow-sm">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Angelica Marie J. Gomez</h5>
-                <p class="card-text text-muted">IT Elective 2 &middot; BSIT31E2</p>
-                <a class="btn btn-primary mt-auto" asp-controller="Gomez" asp-action="Index">View Portfolio</a>
-            </div>
-        </div>
-    </div>
-
-    @* ---- Lloyd Nathaniel Arciaga ---- *@
-    <div class="col">
-        <div class="card h-100 shadow-sm">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Lloyd Nathaniel Arciaga</h5>
-                <p class="card-text text-muted">IT Elective 2 &middot; BSIT31E2</p>
-                <a class="btn btn-primary mt-auto" asp-controller="Arciaga" asp-action="Index">View Portfolio</a>
-            </div>
-        </div>
-    </div>
-
-    @* ---- Stephen Rhane L. Magnayon ---- *@
-    <div class="col">
-        <div class="card h-100 shadow-sm">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Stephen Rhane L. Magnayon</h5>
-                <p class="card-text text-muted">IT Elective 2 &middot; BSIT31E2</p>
-                <a class="btn btn-primary mt-auto" asp-controller="Magnayon" asp-action="Index">View Portfolio</a>
-            </div>
-        </div>
-    </div>
-
-    @* ---- Christopher Joaquin Abadilla ---- *@
-    <div class="col">
-        <div class="card h-100 shadow-sm">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Christopher Joaquin Abadilla</h5>
-                <p class="card-text text-muted">IT Elective 2 &middot; BSIT31E2</p>
-                <a class="btn btn-primary mt-auto" asp-controller="Abadilla" asp-action="Index">View Portfolio</a>
-            </div>
-        </div>
-    </div>
-
-    @* ---- Clarisse Anne Villamor ---- *@
-    <div class="col">
-        <div class="card h-100 shadow-sm">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Clarisse Anne Villamor</h5>
-                <p class="card-text text-muted">IT Elective 2 &middot; BSIT31E2</p>
-                <a class="btn btn-primary mt-auto" asp-controller="Villamor" asp-action="Index">View Portfolio</a>
-            </div>
-        </div>
-    </div>
-
-    @* ---- Alejandro L. Manzano ---- *@
-    <div class="col">
-        <div class="card h-100 shadow-sm">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Alejandro L. Manzano</h5>
-                <p class="card-text text-muted">IT Elective 2 &middot; BSIT31E2</p>
-                <a class="btn btn-primary mt-auto" asp-controller="Manzano" asp-action="Index">View Portfolio</a>
-            </div>
-        </div>
-    </div>
-
-
-
-    @* Classmates: copy the block above, paste it here, and change the name and the controller. DO NOT DELETE THIS LINE PLS PLS PLS *@
-
-</div>
+            input.addEventListener('input', update);
+            update();
+        })();
+    </script>
+}
