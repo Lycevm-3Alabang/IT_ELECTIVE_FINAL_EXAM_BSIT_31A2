@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="..\..\IT_ELECTIVE_2_PREFINALS_QUIZ_Albano_Raven\PREFINALS_QUIZ_PORTFOLIO\PREFINALS_QUIZ_PORTFOLIO\wwwroot\images\prefinals exam.png" Link="wwwroot\images\albano\prefinals exam.png" />
+    <Content Include="..\..\IT_ELECTIVE_2_PREFINALS_QUIZ_Albano_Raven\PREFINALS_QUIZ_PORTFOLIO\PREFINALS_QUIZ_PORTFOLIO\wwwroot\images\prefinals project.png" Link="wwwroot\images\albano\prefinals project.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\albano\" />
     <Folder Include="wwwroot\images\arciaga\" />
   </ItemGroup>
 
