@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Portfolios";
+}
+
+<div class="text-center mb-4">
+    <h1 class="display-5">Portfolios</h1>
+    <p class="text-muted">BSIT31E2 &mdash; click a button to view a classmate's portfolio.</p>
+</div>
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+
+    @* ---- Eirene Ysabel Karunungan ---- *@
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Eirene Ysabel Karunungan</h5>
+                <p class="card-text text-muted">IT Elective 2 &middot; BSIT31E2</p>
+                <a class="btn btn-primary mt-auto" asp-controller="Eirene" asp-action="Index">View Portfolio</a>
+            </div>
+        </div>
+    </div>
+
+    @* Classmates: copy the block above, paste it here, and change the name and the controller. DO NOT DELETE THIS LINE *@
+
+</div>

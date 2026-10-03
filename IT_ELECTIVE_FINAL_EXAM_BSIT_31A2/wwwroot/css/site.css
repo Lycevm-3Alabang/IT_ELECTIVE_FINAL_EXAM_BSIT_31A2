@@ -1,31 +1,194 @@
-html {
-  font-size: 14px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+/* Eirene's portfolio page only. Everything is scoped to .eirene-portfolio
+   so it does not change any other page in the site. */
+
+/* cream page background, only on the page that contains the portfolio */
+body:has(.eirene-portfolio) {
+    background-color: #FBF3E1;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.eirene-portfolio {
+    --card-bg: #FFFDF8;
+    --border: #F0E4C8;
+    --input-bg: #FFFBF0;
+    --text-navy: #1F2A44;
+    --text-gray: #6B7280;
+    --accent-blue: #3B82F6;
+    --accent-blue-dark: #2563EB;
+    font-family: 'Inter', -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--text-navy);
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
+    .eirene-portfolio .exam-shell {
+        max-width: 1080px;
+        margin: 16px auto 32px;
+        padding: 0 20px;
+    }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
+    .eirene-portfolio .exam-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 32px 36px;
+        box-shadow: 0 12px 28px rgba(31, 42, 68, 0.05);
+        overflow: hidden;
+    }
 
-body {
-  margin-bottom: 60px;
-}
+    .eirene-portfolio .exam-heading {
+        font-family: 'Poppins', -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: var(--text-navy);
+        margin-bottom: 6px;
+        position: relative;
+        padding-bottom: 10px;
+    }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
-}
+        .eirene-portfolio .exam-heading::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 56px;
+            height: 4px;
+            background: var(--accent-blue);
+            border-radius: 999px;
+        }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+    .eirene-portfolio .exam-subtitle {
+        color: var(--text-gray);
+        margin-bottom: 20px;
+        font-size: 0.9rem;
+    }
+
+    .eirene-portfolio .field-label {
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--text-gray);
+        font-weight: 700;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    /* Header banner */
+    .eirene-portfolio .hero-banner {
+        background: var(--input-bg);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 22px 28px;
+        margin: -32px -36px 24px -36px;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .eirene-portfolio .hero-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: var(--accent-blue);
+        }
+
+    .eirene-portfolio .hero-content {
+        position: relative;
+        z-index: 1;
+        padding-left: 8px;
+    }
+
+    .eirene-portfolio .hero-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--accent-blue);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 800;
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+
+    .eirene-portfolio .hero-banner .exam-subtitle {
+        margin-bottom: 0;
+    }
+
+    .eirene-portfolio .hero-eyebrow {
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent-blue-dark);
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    /* Project cards */
+    .eirene-portfolio .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        gap: 16px;
+    }
+
+    .eirene-portfolio .project-card {
+        background: var(--input-bg);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        overflow: hidden;
+        text-decoration: none;
+        color: var(--text-navy);
+        display: block;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+        .eirene-portfolio .project-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 16px 32px rgba(31, 42, 68, 0.12);
+            color: var(--text-navy);
+        }
+
+        .eirene-portfolio .project-card .thumb-wrap {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .eirene-portfolio .project-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .eirene-portfolio .project-card:hover img {
+            transform: scale(1.04);
+        }
+
+        .eirene-portfolio .project-card .project-card-body {
+            padding: 12px 14px;
+        }
+
+        .eirene-portfolio .project-card h5 {
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .eirene-portfolio .project-card p {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin: 0;
+        }
+
+.footer {
+    position: static;
+    padding: 16px 0;
+    line-height: 1.5;
+    white-space: normal;
 }
