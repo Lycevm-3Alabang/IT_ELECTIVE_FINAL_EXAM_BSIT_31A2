@@ -1,0 +1,43 @@
+﻿@model List<IT_ELECTIVE_FINAL_EXAM_BSIT_31A2.Models.AntonioProject>
+
+@{
+    ViewData["Title"] = "Antonio's Portfolio";
+}
+
+<link rel="stylesheet" href="~/css/antoniosite.css" asp-append-version="true" />
+
+<div class="eirene-portfolio">
+    <div class="exam-shell">
+        <div class="exam-card">
+            <div class="hero-banner">
+                <div class="hero-content">
+                    <div class="hero-avatar">MA</div>
+                    <div class="hero-eyebrow">IT Elective 2 &middot; BSIT31E2</div>
+                    <h1 class="exam-heading">My Portfolio</h1>
+                    <p class="exam-subtitle">Marc Kevin Antonio &mdash; a collection of my projects from IT Elective 2.</p>
+                </div>
+            </div>
+
+            <span class="field-label">Table of Contents (@Model.Count projects)</span>
+            <div class="project-grid" style="margin-top: 12px;">
+                @foreach (var p in Model)
+                {
+                    <a class="project-card" href="@p.GithubUrl" target="_blank" rel="noopener noreferrer">
+                        <div class="thumb-wrap">
+                            <img src="@p.ThumbnailUrl" alt="@p.Title thumbnail" />
+                        </div>
+                        <div class="project-card-body">
+                            <h5>@p.Title</h5>
+                            <p>@p.Description</p>
+                        </div>
+                    </a>
+                }
+            </div>
+
+            @if (!Model.Any())
+            {
+                <p class="exam-subtitle">No projects added yet.</p>
+            }
+        </div>
+    </div>
+</div>
