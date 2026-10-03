@@ -185,3 +185,10 @@ body:has(.eirene-portfolio) {
             color: var(--text-gray);
             margin: 0;
         }
+
+.footer {
+    position: static;
+    padding: 16px 0;
+    line-height: 1.5;
+    white-space: normal;
+}
