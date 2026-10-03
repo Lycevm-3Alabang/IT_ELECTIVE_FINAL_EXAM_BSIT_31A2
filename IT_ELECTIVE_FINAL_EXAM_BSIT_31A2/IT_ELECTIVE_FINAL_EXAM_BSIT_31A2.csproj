@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\images\albano\" />
+    <Folder Include="wwwroot\images\arciaga\" />
   </ItemGroup>
 
 </Project>
